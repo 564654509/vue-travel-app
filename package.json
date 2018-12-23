@@ -18,9 +18,10 @@
   "lint-staged": {
     "*.js": [
       "prettier --write",
+      "eslint --fix",
       "git add"
     ],
-    "*.{json,md,vue}": [
+    "*.{json,md}": [
       "prettier --write",
       "git add"
     ]
