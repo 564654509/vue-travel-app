@@ -10,10 +10,26 @@
     "lint": "eslint --ext .js,.vue src",
     "build": "node build/build.js"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write",
+      "tslint --fix",
+      "git add"
+    ],
+    "*.{json,js,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
   "dependencies": {
     "fastclick": "^1.0.6",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1",
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
