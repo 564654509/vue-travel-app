@@ -21,7 +21,7 @@
       "tslint --fix",
       "git add"
     ],
-    "*.{json,js,md}": [
+    "*.{json,js,md,vue}": [
       "prettier --write",
       "git add"
     ]
